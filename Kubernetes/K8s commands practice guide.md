@@ -1717,12 +1717,12 @@ kubectl logs <pod-name> --previous    # crashed container
 kubectl logs <pod-name> -c <container>
 
 # Common states
-# Pending      → no node available, insufficient resources, PVC not bound
+# Pending          → no node available, insufficient resources, PVC not bound
 # CrashLoopBackOff → container crashing repeatedly, check logs
 # ImagePullBackOff → image not found or no pull secret
-# OOMKilled    → out of memory, increase limits
-# Terminating  → stuck, may need force delete
-# Error        → container exited with non-zero code
+# OOMKilled        → out of memory, increase limits
+# Terminating      → stuck, may need force delete
+# Error            → container exited with non-zero code
 
 # Force delete stuck pod
 kubectl delete pod <pod-name> --force --grace-period=0
